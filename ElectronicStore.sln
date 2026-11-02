@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElectronicStore", "ElectronicStore\ElectronicStore.csproj", "{6074C188-51B9-4F21-A661-DC31F7661928}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{B8511E94-C7EA-4E67-B3AA-F5B41B0C299F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{6074C188-51B9-4F21-A661-DC31F7661928}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6074C188-51B9-4F21-A661-DC31F7661928}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6074C188-51B9-4F21-A661-DC31F7661928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8511E94-C7EA-4E67-B3AA-F5B41B0C299F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8511E94-C7EA-4E67-B3AA-F5B41B0C299F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8511E94-C7EA-4E67-B3AA-F5B41B0C299F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8511E94-C7EA-4E67-B3AA-F5B41B0C299F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
