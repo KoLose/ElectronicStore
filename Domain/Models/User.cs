@@ -4,10 +4,12 @@ public class User
 {
     private const int MaxLoginLength = 20;
     private const int MaxPasswordLength = 20;
+    private const int DefaultRoleId = 1;
     private User(string login, string passwordHash)
     {
         Login = login;
         PasswordHash = passwordHash;
+        RoleId = DefaultRoleId;
     }
 
     public int Id { get; private set; }
