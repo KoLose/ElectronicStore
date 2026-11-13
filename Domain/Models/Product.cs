@@ -20,6 +20,7 @@ public class Product
     public string Sku { get; private set; }
     public int CategoryId { get; private set; }
     public decimal BasePrice { get; private set; }
+    public List<Review> Reviews { get; set; }
 
     public static (Product? product, string error) Create(
         string name, string sku, int categoryId, decimal basePrice, string? description = null)
