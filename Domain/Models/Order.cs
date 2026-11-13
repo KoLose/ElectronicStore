@@ -13,13 +13,18 @@ public class Order
     public DateTime OrderDate { get; private set; } = DateTime.UtcNow;
     public OrderStatus Status { get; private set; } = OrderStatus.New;
     public decimal TotalPrice { get; private set; }
+    
+    public List<OrderProduct> OrderProducts { get; set; } = new();
 
-    public static (Order? order, string error) Create(int userId, decimal totalPrice)
+    public static (Order? order, string error) Create(int userId, decimal totalPrice, List<OrderProduct>? orderProducts = null)
     {
         if (totalPrice <= 0)
             return (null, "Total price must be positive");
 
-        return (new Order(userId, totalPrice), string.Empty);
+        var order = new Order(userId, totalPrice);
+        order.OrderProducts = orderProducts ?? new List<OrderProduct>();
+
+        return (order, string.Empty);
     }
 }
 
