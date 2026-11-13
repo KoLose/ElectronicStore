@@ -1,13 +1,11 @@
 using Domain.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace WebApi.Infrastructure.DbContext;
+namespace Infastructure.DbContext;
 
 public class ContextDb : Microsoft.EntityFrameworkCore.DbContext
 {
-    public ContextDb(DbContextOptions<ContextDb> options) : base(options)
-    {
-    }
+    public ContextDb(DbContextOptions<ContextDb> options) : base(options) { }
 
     public DbSet<User> Users { get; set; }
     public DbSet<Role> Roles { get; set; }
@@ -28,15 +26,12 @@ public class ContextDb : Microsoft.EntityFrameworkCore.DbContext
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.Entity<FranchiseProduct>()
-            .HasIndex(fp => new { fp.FranchiseId, fp.ProductId })
-            .IsUnique();
+            .HasIndex(fp => new { fp.FranchiseId, fp.ProductId }).IsUnique();
 
         modelBuilder.Entity<Review>()
-            .HasIndex(r => new { r.ProductId, r.UserId })
-            .IsUnique();
+            .HasIndex(r => new { r.ProductId, r.UserId }).IsUnique();
 
         modelBuilder.Entity<FranchiseClient>()
-            .HasIndex(fc => new { fc.FranchiseId, fc.UserId })
-            .IsUnique();
+            .HasIndex(fc => new { fc.FranchiseId, fc.UserId }).IsUnique();
     }
 }
